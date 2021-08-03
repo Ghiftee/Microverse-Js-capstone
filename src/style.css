@@ -22,7 +22,7 @@
 
 /* Comments popup */
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -31,6 +31,10 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  display: block;
 }
 
 .modal-content {
