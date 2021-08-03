@@ -1,13 +1,13 @@
-.nav-div > h1 {
-  margin-left: 200px;
-  margin-right: 100px;
-  margin-top: 10px;
-}
-
 .nav-div-2 {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .nav-bar ul li a {
-  margin-right: 180px;
+  margin-right: 150px;
+}
+
+.nav-img{
+  width: 100px;
+  margin-left: 200px;
+  margin-right: 100px;
 }
