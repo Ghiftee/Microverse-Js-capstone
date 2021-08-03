@@ -36,4 +36,7 @@ export default async function gotoCommentPage(showId) {
           </div>
         </div>
   `;
+
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => modal.classList.remove('active'));
 }

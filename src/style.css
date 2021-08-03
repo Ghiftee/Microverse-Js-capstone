@@ -33,6 +33,10 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.popup-image {
+  width: 50%;
+}
+
 .active {
   display: block;
 }
@@ -40,9 +44,9 @@
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;
-  padding: 1% 5%;
+  padding: 2% 5%;
   border: 1px solid #888;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .popup-image {
