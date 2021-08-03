@@ -1,7 +1,14 @@
-import lookupShow from '../api/api.js';
+import { lookupShow, getComments } from '../api/api.js';
+
+function addItemToList(ul, arr) {
+  arr.forEach((el) => {
+    ul.innerHTML += `<li class="comment-list-item my-2">${el.creation_date} ${el.username}: ${el.comment}</li>`;
+  });
+}
 
 export default async function gotoCommentPage(showId) {
   const showInfo = await lookupShow(showId);
+  const commentsInfo = await getComments(showId);
   const modal = document.querySelector('.modal');
   modal.classList.add('active');
 
@@ -34,8 +41,13 @@ export default async function gotoCommentPage(showId) {
               <h5>Rating : ${showInfo.rating.average}</h5>
             </div>
           </div>
+          <h4 class="comments-title my-2">Comments</h4>
+          <ul class="comments-list list-group list-unstyled">
+          </ul>
         </div>
   `;
+  const ul = document.querySelector('.comments-list');
+  addItemToList(ul, commentsInfo);
 
   const closeButton = document.querySelector('.close');
   closeButton.addEventListener('click', () => modal.classList.remove('active'));
