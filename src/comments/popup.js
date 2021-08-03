@@ -1,10 +1,5 @@
 import { lookupShow, getComments } from '../api/api.js';
-
-function addItemToList(ul, arr) {
-  arr.forEach((el) => {
-    ul.innerHTML += `<li class="comment-list-item my-2">${el.creation_date} ${el.username}: ${el.comment}</li>`;
-  });
-}
+import { addItemToList } from '../home-page/page-display.js';
 
 export default async function gotoCommentPage(showId) {
   const showInfo = await lookupShow(showId);

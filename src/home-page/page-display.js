@@ -58,4 +58,10 @@ const displayShows = (shows) => {
   });
 };
 
-export default displayShows;
+const addItemToList = (ul, arr) => {
+  arr.forEach((el) => {
+    ul.innerHTML += `<li class="comment-list-item my-1">${el.creation_date} ${el.username}: ${el.comment}</li>`;
+  });
+};
+
+export { displayShows, addItemToList };
