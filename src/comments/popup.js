@@ -1,4 +1,4 @@
-import { lookupShow, getComments } from '../api/api.js';
+import { lookupShow, getComments, postCommentToApi } from '../api/api.js';
 
 const addItemToList = (ul, arr) => {
   arr.forEach((el) => {
@@ -43,17 +43,15 @@ export default async function gotoCommentPage(showId) {
           </div>
           <h4 class="comments-title my-2">Comments</h4>
           <ul class="comments-list list-group list-unstyled"></ul>
-          <h5 class="add-comment my-2">Add a comment</h5>
+          <h5 class="add-comment my-4">Add a comment</h5>
           <form class="d-flex flex-column align-items-start" action="#">
             <input
-                class=""
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your name"
             /><br />
             <textarea
-                class="my-2"
                 type="text"
                 id="insight"
                 name="insight"
@@ -70,4 +68,22 @@ export default async function gotoCommentPage(showId) {
 
   const closeButton = document.querySelector('.close');
   closeButton.addEventListener('click', () => modal.classList.remove('active'));
+
+  const name = document.querySelector('#name');
+  const insight = document.querySelector('#insight');
+  const form = document.querySelector('form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    postCommentToApi(showId, name.value, insight.value);
+    addItemToList(ul, [
+      {
+        creation_date: '2021-08-04',
+        username: name.value,
+        comment: insight.value,
+      },
+    ]);
+
+    name.value = '';
+    insight.value = '';
+  });
 }

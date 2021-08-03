@@ -16,4 +16,20 @@ const getComments = async (showId) => {
   return comments;
 };
 
-export { lookupShow, getComments };
+const postCommentToApi = async (showId, name, insight) => {
+  const url = `${involvementBaseUrl}/${appId}/comments`;
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: `${showId}`,
+      username: name,
+      comment: insight,
+    }),
+  });
+  return response.json();
+};
+
+export { lookupShow, getComments, postCommentToApi };
