@@ -33,10 +33,6 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.popup-image {
-  width: 50%;
-}
-
 .active {
   display: block;
 }
@@ -51,6 +47,7 @@
 
 .popup-image {
   border-radius: 5%;
+  width: 50%;
 }
 
 .close {
