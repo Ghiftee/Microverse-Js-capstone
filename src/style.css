@@ -1,4 +1,13 @@
-body {
-  background-color: bisque;
+.nav-div > h1 {
+  margin-left: 200px;
+  margin-right: 100px;
+  margin-top: 10px;
 }
 
+.nav-div-2 {
+  margin-top: 20px;
+}
+
+.nav-bar ul li a {
+  margin-right: 180px;
+}
