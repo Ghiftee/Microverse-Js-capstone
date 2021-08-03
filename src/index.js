@@ -1,6 +1,6 @@
 import './style.css';
-import { lookupShow } from './api/api.js';
-import { displayShows } from './home-page/page-display.js';
+import lookupShow from './api/api.js';
+import displayShows from './home-page/page-display.js';
 
 const shows = [];
 
