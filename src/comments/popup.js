@@ -42,8 +42,27 @@ export default async function gotoCommentPage(showId) {
             </div>
           </div>
           <h4 class="comments-title my-2">Comments</h4>
-          <ul class="comments-list list-group list-unstyled">
-          </ul>
+          <ul class="comments-list list-group list-unstyled"></ul>
+          <h5 class="add-comment my-2">Add a comment</h5>
+          <form class="d-flex flex-column align-items-start" action="#">
+            <input
+                class=""
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+            /><br />
+            <textarea
+                class="my-2"
+                type="text"
+                id="insight"
+                name="insight"
+                placeholder="Your insights"
+                rows="4" 
+                cols="50"
+            ></textarea><br />
+            <input type="submit" id="submit-btn" value="Comment" />
+        </form>
         </div>
   `;
   const ul = document.querySelector('.comments-list');
