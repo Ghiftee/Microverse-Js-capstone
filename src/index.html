@@ -10,8 +10,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -44,8 +46,36 @@
     </header>
     <main class="container-fluid text-center">
       <div id="movies-display" class="row w-750px mx-auto"></div>
-      <div id="comments-display" class="d-none">
-        <!-- Comments Page -->
+      <div id="comments-display" class="modal">
+        <div
+          class="
+            modal-content
+            d-flex
+            flex-column
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div class="d-flex flex-row w-100 justify-content-center">
+            <img
+              src="https://siyahfilmizle.com/wp-content/uploads/2021/06/The-Tomorrow-War-2021-4K-izle.jpg"
+              alt="shows"
+              class="popup-image"
+            />
+            <div class="close">&times;</div>
+          </div>
+          <h3 class="popup-title my-3">Movie Name</h3>
+          <div class="info d-flex flex-row my-2 w-100">
+            <div class="categories d-flex flex-column align-items-start w-50">
+              <h4>Categories : Fiction Science</h4>
+              <h4>Categories : Fiction Romance</h4>
+            </div>
+            <div class="categories d-flex flex-column align-items-start w-50">
+              <h4>Categories : Fiction Tech</h4>
+              <h4>Categories : Fiction War</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="border-top border-dark">

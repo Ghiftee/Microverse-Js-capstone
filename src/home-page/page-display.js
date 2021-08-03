@@ -1,19 +1,12 @@
+import gotoCommentPage from '../comments/popup.js';
+
 class ShowContainer {
   constructor(showImage, showName, showLikes, showId) {
     this.showImage = showImage;
     this.showName = showName;
     this.showLikes = `${showLikes} Likes`;
     this.showId = showId;
-    // this.gotoCommentPage = this.gotoCommentPage.bind(this);
   }
-
-  // gotoCommentPage() {
-  //   // After creating class for comment page, pass showId to constructor
-  //   // The comments page class should have a function show() that displays the
-  //   // comments page div and hides the showsPanel div
-  //   // const commentsDisplay = new CommentsPage(this.showId);
-  //   // commentsDisplay.show();
-  // }
 
   display() {
     const showsPanel = document.getElementById('movies-display');
@@ -46,7 +39,7 @@ class ShowContainer {
     commentButton.classList.add('mt-2');
     commentButton.innerText = 'Comment';
 
-    // commentButton.addEventListener('click', this.gotoCommentPage);
+    commentButton.addEventListener('click', () => gotoCommentPage(this.showId));
 
     container.append(showImg, infoDiv, numLikes, commentButton);
     showsPanel.append(container);
@@ -65,4 +58,4 @@ const displayShows = (shows) => {
   });
 };
 
-module.exports = { displayShows };
+export default displayShows;

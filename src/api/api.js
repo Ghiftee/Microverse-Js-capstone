@@ -7,4 +7,4 @@ const lookupShow = async (showId) => {
   return show;
 };
 
-module.exports = { lookupShow };
+export default lookupShow;
