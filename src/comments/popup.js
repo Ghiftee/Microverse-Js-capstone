@@ -6,6 +6,8 @@ const addItemToList = (ul, arr) => {
   });
 };
 
+const getCounts = (arr) => arr.length;
+
 export default async function gotoCommentPage(showId) {
   const showInfo = await lookupShow(showId);
   const commentsInfo = await getComments(showId);
@@ -41,7 +43,7 @@ export default async function gotoCommentPage(showId) {
               <h5>Rating : ${showInfo.rating.average}</h5>
             </div>
           </div>
-          <h4 class="comments-title my-2">Comments</h4>
+          <h4 class="comments-title my-2">Comments (${getCounts(commentsInfo)})</h4>
           <ul class="comments-list list-group list-unstyled"></ul>
           <h5 class="add-comment my-4">Add a comment</h5>
           <form class="d-flex flex-column align-items-start" action="#">
