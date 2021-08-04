@@ -23,6 +23,24 @@ const arr = [
   },
 ];
 
-test('input an array wiht 4 elements', () => {
-  expect(getCounts(arr)).toEqual(4);
+describe('test for a function counting number of comments', () => {
+  test('input an array wiht 4 elements', () => {
+    expect(getCounts(arr)).toEqual(4);
+  });
+
+  test('input an array wiht 4 elements', () => {
+    expect(
+      getCounts([
+        {
+          creation_date: '2021-08-04',
+          username: 'helen',
+          comment: 'very good',
+        },
+      ]),
+    ).toEqual(1);
+  });
+
+  test('input an array wiht 4 elements', () => {
+    expect(getCounts([])).toEqual(0);
+  });
 });
