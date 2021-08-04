@@ -1,15 +1,27 @@
 .nav-div-2 {
-  margin-top: 30px;
+  margin-left: 4rem;
 }
 
 .nav-bar ul li a {
-  margin-right: 150px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+.logo {
+  width: 65px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .nav-img {
   width: 100px;
-  margin-left: 200px;
-  margin-right: 100px;
+  height: 100px;
+  margin: -20px 0 0 -18px;
 }
 
 .w-200px {
