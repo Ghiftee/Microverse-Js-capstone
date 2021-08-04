@@ -35,7 +35,6 @@ class ShowContainer {
 
     const likeButton = document.createElement('i');
     likeButton.classList.add('far', 'fa-heart');
-
     likeButton.addEventListener('click', async () => {
       const status = await likeMovie(this.showId);
       if (status === 201) {
