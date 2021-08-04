@@ -6,7 +6,8 @@ const addItemToList = (ul, arr) => {
   });
 };
 
-const getCounts = (arr) => arr.length;
+export const getCounts = (arr) => arr.length;
+
 const incrementCount = (title, commentsInfo) => {
   const value = getCounts(commentsInfo) + 1;
   title.textContent = `Comments (${value})`;
@@ -52,12 +53,14 @@ export default async function gotoCommentPage(showId) {
           <h5 class="add-comment my-4">Add a comment</h5>
           <form class="d-flex flex-column align-items-start" action="#">
             <input
+                class="form-control"
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your name"
             /><br />
             <textarea
+                class="form-control"
                 type="text"
                 id="insight"
                 name="insight"
@@ -65,7 +68,7 @@ export default async function gotoCommentPage(showId) {
                 rows="4" 
                 cols="50"
             ></textarea><br />
-            <input type="submit" id="submit-btn" value="Comment" />
+            <input class="btn btn-dark" type="submit" id="submit-btn" value="Comment" />
         </form>
         </div>
   `;
