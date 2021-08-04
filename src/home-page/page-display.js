@@ -1,10 +1,11 @@
 import gotoCommentPage from '../comments/popup.js';
+import { getLikes } from '../api/involvement.js';
 
 class ShowContainer {
   constructor(showImage, showName, showLikes, showId) {
     this.showImage = showImage;
     this.showName = showName;
-    this.showLikes = `${showLikes} Likes`;
+    this.showLikes = showLikes;
     this.showId = showId;
   }
 
@@ -23,6 +24,8 @@ class ShowContainer {
     const numLikes = document.createElement('p');
     numLikes.classList.add('text-end', 'mb-0');
     numLikes.innerText = this.showLikes;
+
+    this.numLikesDisplay = numLikes;
 
     const likeButton = document.createElement('i');
     likeButton.classList.add('far', 'fa-heart');
@@ -46,12 +49,16 @@ class ShowContainer {
   }
 }
 
-const displayShows = (shows) => {
+const displayShows = async (shows) => {
+  const result = await getLikes();
   shows.forEach((show) => {
+    let numLikes = 0;
+    numLikes = result.likes.find((item) => item.item_id === show.id)
+      ? result.likes.find((item) => item.item_id === show.id).likes : 0;
     const showContainer = new ShowContainer(
       show.image.original,
       show.name,
-      0,
+      numLikes,
       show.id,
     );
     showContainer.display();
