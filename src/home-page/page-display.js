@@ -1,27 +1,19 @@
 import gotoCommentPage from '../comments/popup.js';
-// start
 import { likeMovie, getLikes } from '../api/involvement.js';
-// stop
 
 class ShowContainer {
   constructor(showImage, showName, showLikes, showId) {
     this.showImage = showImage;
     this.showName = showName;
-
-    // start
-    // this.showLikes = `${showLikes} Likes`;
     this.showLikes = showLikes;
     this.updateLikes = this.updateLikes.bind(this);
     this.updateLikes.numLikesDisplay = null;
-    // stop
     this.showId = showId;
   }
 
-  // start
   updateLikes() {
     this.numLikesDisplay.innerText = this.showLikes === 1 ? `${this.showLikes} Like` : `${this.showLikes} Likes`;
   }
-  // stop
 
   display() {
     const showsPanel = document.getElementById('movies-display');
@@ -39,14 +31,10 @@ class ShowContainer {
     numLikes.classList.add('text-end', 'mb-0');
     numLikes.innerText = this.showLikes;
 
-    // start
     this.numLikesDisplay = numLikes;
-    // stop
 
     const likeButton = document.createElement('i');
     likeButton.classList.add('far', 'fa-heart');
-
-    // start
     likeButton.addEventListener('click', async () => {
       const status = await likeMovie(this.showId);
       if (status === 201) {
@@ -54,7 +42,6 @@ class ShowContainer {
         this.updateLikes();
       }
     });
-    // stop
 
     const infoDiv = document.createElement('div');
     infoDiv.classList.add(
@@ -73,14 +60,11 @@ class ShowContainer {
     container.append(showImg, infoDiv, numLikes, commentButton);
     showsPanel.append(container);
 
-    // start
     this.updateLikes();
-    // stop
   }
 }
 
 const displayShows = async (shows) => {
-  // start
   const result = await getLikes();
   shows.forEach((show) => {
     let numLikes = 0;
@@ -94,7 +78,6 @@ const displayShows = async (shows) => {
     );
     showContainer.display();
   });
-  // stop
 };
 
 export default displayShows;
