@@ -7,6 +7,10 @@ const addItemToList = (ul, arr) => {
 };
 
 const getCounts = (arr) => arr.length;
+const incrementCount = (title, commentsInfo) => {
+  const value = getCounts(commentsInfo) + 1;
+  title.textContent = `Comments (${value})`;
+};
 
 export default async function gotoCommentPage(showId) {
   const showInfo = await lookupShow(showId);
@@ -74,6 +78,7 @@ export default async function gotoCommentPage(showId) {
   const name = document.querySelector('#name');
   const insight = document.querySelector('#insight');
   const form = document.querySelector('form');
+  const title = document.querySelector('.comments-title');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     postCommentToApi(showId, name.value, insight.value);
@@ -84,8 +89,8 @@ export default async function gotoCommentPage(showId) {
         comment: insight.value,
       },
     ]);
-
     name.value = '';
     insight.value = '';
+    incrementCount(title, commentsInfo);
   });
 }
