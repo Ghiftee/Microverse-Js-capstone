@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await lookupShow(143),
     await lookupShow(144),
   );
+  const movieId = document.getElementById('movies-id');
+  movieId.innerText = `Movies (${shows.length})`;
   await createApp();
   await displayShows(shows);
 });
