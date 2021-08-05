@@ -1,7 +1,14 @@
 # Microverse-Js-capstone
 > This capstone project is designed to allow you to view movie lists and interact by liking or commenting.
 
-It is built as a part of Microverse Web Developer Course. This is the capstone project of the second module within the scope of the course. This project was created by teamwork.
+It is built as a part of Microverse Web Developer Course. This is the capstone project of the second module within the scope of the course.
+
+In this project, we created a webapp using a TVmaze API that gives data about TV series and Movies. The TVmaze API allowed us to get a list of items with a unique ID and to also get detailed information about the item. In addition to the TVmaze API, we used an Involvement API created by Microverse to record interactions on the app such as likes and comments. Using the wireframe provided, we built a header, footer, homepage and comments popup page.
+
+* @Ghiftee worked as Student A on this project and implemented everything that has to do with the movies display on the homepage and the like button.
+* @tacettinkustu worked as Student B and created everything that involves the comment button and comment page popup.
+
+Each branch on this project was created from the dev branch and they represent a card on the Kanban board. After working on each card/branch(excluding the set-up branch which we worked on together), we reviewed each other's codes and did not begin work on the next card/branch until our pull request was approved.
 
 ![homepage](https://user-images.githubusercontent.com/51737508/128314056-979f54ff-1fc4-4418-9e4b-c6434b2cc1be.PNG)
 
