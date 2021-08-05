@@ -1,4 +1,4 @@
-import gotoCommentPage from '../comments/popup.js';
+import { gotoCommentPage } from '../comments/popup.js';
 import { likeMovie, getLikes } from '../api/involvement.js';
 
 class ShowContainer {

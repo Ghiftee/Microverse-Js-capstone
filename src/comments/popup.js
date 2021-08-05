@@ -13,7 +13,7 @@ const incrementCount = (title, commentsInfo) => {
   title.textContent = `Comments (${value})`;
 };
 
-export default async function gotoCommentPage(showId) {
+export const gotoCommentPage = async (showId) => {
   const showInfo = await lookupShow(showId);
   const commentsInfo = await getComments(showId);
   const modal = document.querySelector('.modal');
@@ -96,4 +96,4 @@ export default async function gotoCommentPage(showId) {
     insight.value = '';
     incrementCount(title, commentsInfo);
   });
-}
+};
