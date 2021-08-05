@@ -29,4 +29,4 @@ const getLikes = async () => {
   return JSON.parse(`{"likes": ${likes}}`);
 };
 
-module.exports = { createApp, likeMovie, getLikes };
+export { createApp, likeMovie, getLikes };
