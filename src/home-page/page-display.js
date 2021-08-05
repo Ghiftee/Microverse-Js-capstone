@@ -81,4 +81,6 @@ const displayShows = async (shows) => {
   });
 };
 
-export default displayShows;
+const countItems = (movies) => movies.length;
+
+export { countItems, displayShows };
