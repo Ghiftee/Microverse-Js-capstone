@@ -1,7 +1,7 @@
 # Microverse-Js-capstone
-> This capstone project is designed to allow you to view movie lists and interact with movies by liking or commenting.
+> This capstone project is designed to allow you to view movie lists and interact by liking or commenting.
 
-* It is built as a part of Microverse Web Developer Course. This is the capstone project of the second module within the scope of the course. This project was created by teamwork.
+It is built as a part of Microverse Web Developer Course. This is the capstone project of the second module within the scope of the course. This project was created by teamwork.
 
 ![homepage](https://user-images.githubusercontent.com/51737508/128314056-979f54ff-1fc4-4418-9e4b-c6434b2cc1be.PNG)
 
