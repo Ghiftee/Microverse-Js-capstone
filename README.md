@@ -12,9 +12,9 @@
 * Javascript
 
 
-## Live Demo
+## Presentation of Project
 
-[Live Demo Link](#)
+[Video Link](#)
 
 
 ## Project Description
